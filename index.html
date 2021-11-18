@@ -6,6 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="assets/icomoon/style.css" />
+
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,9 +21,18 @@
   <header id=header>
     <nav class="container">
       <a class="logo">clini<span>dentes</span></a>
-      <div class="menu">...</div>
+      <div class="menu">
+        <ul class="grid">
+          <li><a class="title" href="#home">Início</a></li>
+          <li><a class="title" href="#about">Sobre</a></li>
+          <li><a class="title" href="#services">Serviços</a></li>
+          <li><a class="title" href="#testimonials">Depoimentos</a></li>
+          <li><a class="title" href="#contact">Contato</a></li>
+        </ul>
+      </div>
+      <div class="toggle icon-menu"></div>
+      <div class="toggle icon-close"></div>
     </nav>
-    <!-- utiliza esse h1 como logo -->
 
   </header>
 
@@ -31,24 +42,35 @@
     <section class="section" id="home">
       <div class="container grid">
         <div class="image">
-          <img src="./img/boy.jpg" alt="garoto afro dentista">
+          <img src="./assets/img/young-african-american-man.jpg" alt="garoto afro dentista">
         </div>
         <div class="text">
-          <h1>Cuidando bem do seu sorriso</h1>
-          <p>A clinidentes é uma franquia de clínicas odontologicos. A primeira clínica foi criada em 2009 no interior de Itapipoca,Ceará.
-            
-            Amor, o instituto mais que dinheiro, visa a necessidade de espalhar sorrisos, com o projeto sorrisos solidários, a clinidentes atende a população carente devolvendo e tratando os dentes das populações do interior</p>
+          <h2 class="title" class="title"> Cuidando bem do seu sorriso</h2>
+          <p>A clinidentes é uma franquia de clínicas odontologicos. A primeira clínica foi criada em 2009 no interior
+            de Itapipoca,Ceará.
+
+            Amor, o instituto mais que dinheiro, visa a necessidade de espalhar sorrisos, com o projeto sorrisos
+            solidários, a clinidentes atende a população carente devolvendo e tratando os dentes das populações do
+            interior</p>
           <a class="btn" href="#">Agende um horário</a>
         </div>
       </div>
     </section>
     <div class="divider-1"></div>
     <div class="section">
-      <div class="container">
-        outra seção
-      </div>
+
+      <section class="section" id="about">
+        <div class="container grid">Sobre</div>
+      </section>
+
+      <section class="section" id="services">
+        <container class="container grid">Serviços</container>
+      </section>
+
+
     </div>
   </main>
+  <script src="./main.js"></script>
 </body>
 
 </html>
