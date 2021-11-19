@@ -22,6 +22,10 @@ img {
   --base-color-second: #1477be;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 body {
   font: 400 1rem "DM Sans", sans-serif;
   color: var(--text-color);
@@ -47,6 +51,18 @@ body {
   padding: 5rem 0;
 }
 
+.section .title {
+  margin-bottom: 1rem;
+}
+
+.section header {
+  margin-bottom: 4rem;
+}
+
+.section header strong {
+  color: var(--base-color-second);
+}
+
 #header {
   border-bottom: 1px solid #ddd8d8;
   margin-bottom: 2rem;
@@ -57,6 +73,9 @@ body {
   z-index: 100;
   background-color: var(--body-color);
   width: 100%;
+}
+#header.scroll{
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.1);
 }
 
 nav {
@@ -96,15 +115,21 @@ nav ul li a:hover::after {
 nav .menu {
   opacity: 0;
   visibility: hidden;
-}
-
-nav .menu {
+  top: -20rem;
+  transition: 0.2s;
   opacity: 0;
   visibility: hidden;
 }
+
+nav .menu ul{
+  display: none;
+}
+
 nav.show .menu {
   opacity: 1;
   visibility: visible;
+  display: grid;
+  place-content: center;
 
   background: var(--body-color);
   height: 100vh;
@@ -113,15 +138,17 @@ nav.show .menu {
   position: fixed;
   top: 0;
   left: 0;
+  transition: 0.2s;
 }
-nav.show .menu {
+
+nav.show .menu ul{
   display: grid;
-  place-content: center;
 }
 
 nav.show ul.grid {
   gap: 4rem;
 }
+
 .toggle {
   color: var(--base-color);
   font-size: 1.5rem;
@@ -134,11 +161,13 @@ nav .icon-close {
 
   position: absolute;
   right: 1.5rem;
+  transition: 0.2s;
 }
 
 nav.show div.icon-close {
   visibility: visible;
   opacity: 1;
+  top: 1.5rem;
 }
 
 .logo {
@@ -211,4 +240,70 @@ main {
 .divider-1 {
   height: 3px;
   background: linear-gradient(270deg, #1477be, rgba(35, 223, 252, 0.34) 100%);
+}
+
+.divider-2 {
+  height: 3px;
+  background: linear-gradient(270deg, rgba(35, 223, 252, 0.34), #1477be 100%);
+}
+
+#about {
+  background: white;
+}
+
+#about .container {
+  margin: 0;
+}
+
+#about .image {
+  position: relative;
+}
+
+#about .image::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: #1477be;
+  position: absolute;
+  top: -8.3%;
+  left: -33%;
+  z-index: 0;
+}
+
+#about .image img {
+  position: relative;
+}
+
+#about .image img,
+#about .image::before {
+  border-radius: 0.25rem;
+}
+
+#about .text {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.cards.grid {
+  gap: 1.5rem;
+}
+
+.card {
+  padding: 3.625rem 2rem;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
+  border-bottom: 0.25rem solid var(--base-color);
+  border-radius: 0.25rem 0.25rem 0 0;
+  text-align: center;
+}
+
+.card i{
+  display: block;
+  margin-bottom: 1.5rem;
+  font-size: 5rem;
+  color: var(--base-color);
+}
+
+.card .title{
+font-size: 1.5rem;
+margin-bottom: 0.75rem;
 }
