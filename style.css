@@ -174,9 +174,14 @@ nav.show div.icon-close {
   font: 700 1.31rem "Poppins", sans-serif;
   color: var(--title-color);
 }
+
 .logo span {
-  color: var(--base-color);
+  color: var(--base-color-second);
 }
+.logo-alt span {
+  color: var(--body-color);
+}
+
 main {
   margin-top: calc(4.5rem + 2rem);
 }
@@ -369,4 +374,79 @@ main {
 
 .swiper-pagination-bullet-active {
   background: var(--base-color);
+}
+
+#contact .grid {
+  gap: 4rem;
+}
+
+#contact .text p {
+  margin-bottom: 2rem;
+}
+
+#contact .btn i,
+#contact ul li i {
+  font-size: 1.5rem;
+  margin-right: 0.625rem;
+}
+
+#contact ul.grid {
+  gap: 2rem;
+}
+
+#contact ul li {
+  display: flex;
+  align-items: center;
+}
+
+#contact ul li i {
+  color: var(--base-color);
+}
+
+footer {
+  background: var(--base-color-second);
+}
+
+footer .brand p {
+  color: #ffffff;
+  margin-bottom: 0.75rem;
+}
+
+footer i {
+  font-size: 1.5rem;
+  color: var(--body-color);
+}
+
+footer .social a{
+  display: inline-block;
+  margin-right: 2rem;
+  transition: 0.3s;
+  
+}
+
+footer .social a:hover{
+  transform: translateY(-8px);
+}
+
+.back-to-top {
+  background-color: var(--base-color);
+  color: #ffffff;
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  padding: 0.8rem;
+  clip-path: circle();
+  font-size: 1.5rem;
+  line-height: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s;
+  transform: translateY(100%);
+}
+
+.back-to-top.show {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+
 }
